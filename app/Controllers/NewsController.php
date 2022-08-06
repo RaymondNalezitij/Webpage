@@ -34,7 +34,7 @@ class NewsController
 
     public function create(): View
     {
-        return new View('create_article.twig');
+        return new View('CreateArticle.twig');
     }
 
     public function store(): void

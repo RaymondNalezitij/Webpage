@@ -6,8 +6,4 @@ Copy the key to ".env.example" file "NEWS_API_KEY" variable.
 Go to "http://api.weatherapi.com" to register for a key.
 Copy the key to ".env.example" file "WEATHER_API_KEY" variable.
 
-The "WEBPAGE_BG_IMG_SRC" variable is not mandatory.
-This variable will set the background of the page to an image of your choosing.
-To use this variable you need find a link for an image anywhere and copy the link to the variable.
-
 After that you need to rename the ".env.example" to ".env".

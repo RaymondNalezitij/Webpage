@@ -1,0 +1,21 @@
+<style>
+    {% include "./Models/NewsOutputComponents/Body/NewsArticle/NewsArticle.css" %}
+</style>
+
+{% for news in responses %}
+
+        <div class="article">
+            <a href="{{ news.url }}" target=”_blank” style="text-decoration: none;">
+                <div class="article-content">
+                    <h2>{{ news.title }}</h2>
+                    <p>"{{ news.description }}"</p>
+                    <img src="{{ news.urlToImage }}" alt="Picture not found">
+                    <div class="post-author-date">
+                        <p class="align-left">{{ news.author }}</p>
+                        <p class="align-right">{{ news.publishedAt }}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+{% endfor %}

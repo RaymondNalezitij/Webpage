@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+
+<style>
+    {% include "./Shared/Styles/reset.css" %}
+    {% include "./Shared/Styles/fonts.css" %}
+    {% include "./Models/CreateArticleComponents/CreateArticle.css" %}
+</style>
+
+{% include "./Shared/head.twig" %}
+
+<body>
+
+<div class="container">
+    <h2 style="color: white; padding:20px; text-align: center;">Add news:</h2>
+    <form class="form" method="post" action="/addArticle">
+        <input class="title" name="Title" placeholder="Title" maxlength="200">
+        <input class="description" name="Description" placeholder="Description" maxlength="500">
+        <button class="button-85" type="submit" class="" style="width: 100%; border-radius: 10px">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

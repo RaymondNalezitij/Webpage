@@ -1,0 +1,43 @@
+.article {
+    margin: 10px;
+    transition: 0.7s;
+}
+
+.article:hover {
+    opacity: 80%;
+    transition: 0.7s;
+}
+
+.article-content {
+    padding: 10px 0px 20px 0px;
+    background-color: #191919;
+    border: 1px solid #191919;
+    border-radius: 10px;
+}
+
+.article-content h2{
+    padding: 10px 10px 10px 10px;
+    color: white
+}
+
+.article-content p{
+    padding: 0px 10px 10px 10px;
+    color: white
+}
+
+.article-content img{
+    max-width: 100%;
+}
+
+.post-author-date {
+    color: #dcdcdc;
+    font-size: x-small;
+}
+
+.align-left {
+    float: left;
+}
+
+.align-right {
+    float: right;
+}
