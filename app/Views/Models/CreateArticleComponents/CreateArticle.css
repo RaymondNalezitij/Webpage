@@ -6,27 +6,33 @@ body {
 }
 
 .container {
-    background-color:  #191919;
+    background-color: #191919;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 100px;
-    border-radius: 10px;
+    border-radius: 15px;
+}
+
+.container h2 {
+    color: white;
+    padding: 20px 0px 0px 0px;
+    text-align: center;
 }
 
 .form {
-    padding:0px 20px 20px 20px
+    padding: 0px 15px 15px 15px
 }
 
-.title{
-    height:80px;
+.textBox-title {
+    height: 80px;
     width: 100%;
     border-radius: 10px;
     margin-top: 10px;
 }
 
-.description{
-    height:150px;
+.textBox-description {
+    height: 150px;
     width: 100%;
     border-radius: 10px;
     margin-top: 10px;
@@ -87,11 +93,6 @@ body {
     100% {
         background-position: 0 0;
     }
-}
-
-.button-85:hover {
-    background-color: black;
-    transition: 0.7s;
 }
 
 .button-85:after {

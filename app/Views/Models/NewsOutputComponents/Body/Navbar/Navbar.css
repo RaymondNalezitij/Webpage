@@ -1,15 +1,13 @@
 .navbar {
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
     background-color: #191919;
-    position: relative;
-    top: 0;
+    overflow: hidden;
+    position: fixed;
     margin: auto;
     min-width: fit-content;
     max-width: 915px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    z-index: 1;
 }
 
 .navbar a {
@@ -19,11 +17,11 @@
     text-align: center;
     padding: 14px 40px;
     text-decoration: none;
-    transition: 0.7s;
+    transition: 0.3s;
 }
 
 .navbar a:hover {
     background: #ddd;
     color: black;
-    transition: 0.7s;
+    transition: 0.3s;
 }

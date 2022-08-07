@@ -3,29 +3,24 @@
 </style>
 
 <section>
-    <div class="main">
 
+<div class="main">
         <div class="page-top">
             <div class="title">
                 <h1>{{ category }} news</h1>
             </div>
-
             <div class="weather-display">
                 <div>
                     <img src="{{ weather.getIcon }}">
                 </div>
                 <div>
-
                     {{ weather.getTempC }}°C
-
                     <div class="future-weather">
-
                         {% for weathers in futureWeather %}
                             <div>
                                 <img src="{{ weathers.getIcon }}" style="max-width: 30px">
                             </div>
                         {% endfor %}
-
                     </div>
                 </div>
             </div>
