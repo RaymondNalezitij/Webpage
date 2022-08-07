@@ -20,16 +20,26 @@ section {
     font-size: 22px;
 }
 
-.future-weather{
+.future-weather {
     display: flex;
     flex-direction: row;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    padding: 13px 0px 0px 0px;
+}
+
+.title img {
+    max-height: 40px;
+    margin: 5px;
 }
 
 .title h1 {
     color: white;
     text-align: center;
     font-size: 30px;
-    padding: 13px 0px 0px 0px;
 }
 
 .main {
