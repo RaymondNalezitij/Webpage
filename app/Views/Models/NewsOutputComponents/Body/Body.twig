@@ -29,11 +29,20 @@
 
         <div class="add-article">
             <div style="margin: 30px">
-                <a href="/addArticle">
+                <a href="/addArticle/create">
                     <button type="button" class="button-85">Add an article</button>
                 </a>
             </div>
         </div>
+
+        <div class="add-article">
+            <div style="margin-bottom: 30px">
+                <a href="/userArticles">
+                    <button type="button" class="button-85">View user articles</button>
+                </a>
+            </div>
+        </div>
+
         {% include "./Models/NewsOutputComponents/Body/NewsArticle/NewsArticle.twig" %}
     </div>
 </section>

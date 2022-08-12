@@ -11,7 +11,7 @@ class NewsArticle
     private string $urlToImage;
     private string $publishedAt;
 
-    public function __construct(string $author, string $title, string $description, string $url, string $urlToImage, string $publishedAt)
+    public function __construct(string $author, string $title, string $description, string $url = '', string $urlToImage = '', string $publishedAt = '')
     {
         $this->author = $author;
         $this->title = $title;

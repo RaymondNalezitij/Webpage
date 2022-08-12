@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Repositories\UserNewsRepository;
 use App\Repositories\WeatherApiRepository;
 use App\Services\DisplayAllNewsService;
 use App\Services\StoreNewsArticleService;
@@ -27,8 +28,7 @@ class NewsController
             'responses' => $this->newsService->execute($category)->getAll(),
             'weather' => $weather[0],
             'futureWeather' => $weather[1],
-            'category' => ucfirst($category),
-            'background_img' => $_ENV['WEBPAGE_BG_IMG_SRC']
+            'category' => ucfirst($category)
         ]);
     }
 
@@ -41,5 +41,14 @@ class NewsController
     {
         $store = new StoreNewsArticleService();
         $store->execute();
+    }
+
+    public function displayUserArticles(): View
+    {
+        $display = new UserNewsRepository();
+
+        return new View('UserArticles.twig', [
+            'responses' => $display->post()
+        ]);
     }
 }

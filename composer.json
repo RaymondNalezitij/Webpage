@@ -12,7 +12,8 @@
     "guzzlehttp/guzzle": "^7.4",
     "twbs/bootstrap": "^5.2",
     "vlucas/phpdotenv": "^5.4",
-    "php-di/php-di": "*"
+    "php-di/php-di": "*",
+    "doctrine/dbal": "^3.4"
   },
   "config": {
     "allow-plugins": {

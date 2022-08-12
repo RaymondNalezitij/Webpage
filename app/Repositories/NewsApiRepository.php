@@ -10,13 +10,13 @@ use GuzzleHttp\Client;
 
 class NewsApiRepository implements RepositoryInterface
 {
-    public function getAll(string $cattegory): NewsCollection
+    public function getAll(string $category): NewsCollection
     {
         $client = new Client([
             'base_uri' => $_ENV['NEWS_API_URL']
         ]);
 
-        $path = "top-headlines?country=us&category=$cattegory&apiKey=";
+        $path = "top-headlines?country=us&category=$category&apiKey=";
 
         $response = json_decode(
             $client->get($path . $_ENV['NEWS_API_KEY'])->getBody()->getContents()

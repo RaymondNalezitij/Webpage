@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<style>
+    {% include "./Shared/Styles/reset.css" %}
+    {% include "./Shared/Styles/fonts.css" %}
+    {% include "./Models/NewsOutputComponents/NewsOutput.css" %}
+    {% include "./Models/NewsOutputComponents/Body/Body.css" %}
+    {% include "./Models/NewsOutputComponents/Body/NewsArticle/NewsArticle.css" %}
+</style>
+
+{% include "./Shared/head.twig" %}
+
+<body>
+
+<section>
+
+    <div class="main">
+        <div class="page-top">
+            <div class="title">
+                <h1>User news</h1>
+            </div>
+        </div>
+        {% for news in responses %}
+            <div class="article">
+                <a href="{{ news.url }}" target=”_blank” style="text-decoration: none;">
+                    <div class="article-content">
+                        <h2>{{ news.title }}</h2>
+                        <p>"{{ news.description }}"</p>
+                        <img src="{{ news.getImgLink }}" alt="Picture not found">
+                        <div class="post-author-date">
+                            <p class="align-right">{{ news.getCreatedAt }}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+</body>
+
+</html>

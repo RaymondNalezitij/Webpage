@@ -8,7 +8,9 @@ $dotenv->load();
 $dispatcher = FastRoute\simpleDispatcher(function (FastRoute\RouteCollector $r) {
     $r->addRoute('GET', '/', 'App\Controllers\NewsController@index');
 
-    $r->addRoute('GET', '/addArticle', 'App\Controllers\NewsController@create');
+    $r->addRoute('GET', '/userArticles', 'App\Controllers\NewsController@displayUserArticles');
+
+    $r->addRoute('GET', '/addArticle/create', 'App\Controllers\NewsController@create');
     $r->addRoute('POST', '/addArticle', 'App\Controllers\NewsController@store');
 });
 

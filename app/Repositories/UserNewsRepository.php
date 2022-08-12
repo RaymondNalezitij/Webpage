@@ -3,22 +3,41 @@
 namespace App\Repositories;
 
 use App\Models\UserNewsArticle;
+use Doctrine\DBAL\Exception;
 
 class UserNewsRepository
 {
-    public function getAll(): array
+    /** @throws Exception */
+    public function post()
     {
-        $userArticles = explode(";", file_get_contents('./UserArticle.csv'));
-        array_pop($userArticles);
+        $connectionParams = [
+            'dbname' => 'News',
+            'user' => 'user',
+            'password' => 'password',
+            'host' => 'localhost',
+            'driver' => 'pdo_mysql'
+        ];
+
+        $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
+        $queryBuilder = $conn->createQueryBuilder();
+
+        $articles = $queryBuilder
+            ->select('title, description, img, url, created_at')
+            ->from('news')
+            ->executeQuery();
+
+        $userArticles = $articles->fetchAllAssociative();
 
         foreach ($userArticles as $data) {
-            $data = explode(",", $data);
-            $userNews[] = new UserNewsArticle(
-                $data[0],
-                $data[1],
+            $news[] = new UserNewsArticle(
+                (string)$data['title'],
+                (string)$data['description'],
+                (string)$data['img'],
+                (string)$data['url'],
+                (string)$data['created_at'],
             );
         }
 
-        return $userNews;
+        return $news;
     }
 }

@@ -15,6 +15,6 @@ class DisplayAllUserArticlesService
 
     public function execute(): array
     {
-        return $this->newsRepository->getAll();
+        return $this->newsRepository->post();
     }
 }
