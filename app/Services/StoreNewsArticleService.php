@@ -20,7 +20,6 @@ class StoreNewsArticleService
         $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
         $queryBuilder = $conn->createQueryBuilder();
 
-        var_dump($_POST);
         $queryBuilder
             ->insert('news')
             ->values([

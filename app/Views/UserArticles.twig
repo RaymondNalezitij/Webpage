@@ -11,15 +11,22 @@
 {% include "./Shared/head.twig" %}
 
 <body>
+<div style="display: flex;flex-direction: row;min-width: 912px; justify-content: left">
+    <a class="return" href="/" style="display: flex;flex-direction: row;text-decoration: none; margin-top: 20px;">
+        <img src="/app/Views/Shared/back_arrow.png" style="max-height: 30px;">
+        <h3 style="margin: 1px 0 0 5px; color: white">Main page</h3>
+    </a>
+</div>
 
 <section>
-
     <div class="main">
+
         <div class="page-top">
             <div class="title">
-                <h1>User news</h1>
+                <h1 style="margin: 10px;">User news</h1>
             </div>
         </div>
+
         {% for news in responses %}
             <div class="article">
                 <a href="{{ news.url }}" target=”_blank” style="text-decoration: none;">
@@ -36,6 +43,7 @@
         {% endfor %}
     </div>
 </section>
+
 </body>
 
 </html>
