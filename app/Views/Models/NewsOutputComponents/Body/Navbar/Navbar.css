@@ -1,21 +1,31 @@
 .navbar {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    flex-flow: row;
+    max-width: 912px;
+    width: 100%;
+
     background-color: #191919;
     overflow: hidden;
     position: fixed;
     margin: auto;
-    min-width: fit-content;
-    max-width: 915px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     z-index: 1;
 }
 
+.navbar p {
+    font-size: 2vw;
+}
+
 .navbar a {
+    display: flex;
+    justify-content: center;
     float: left;
-    display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 40px;
+    padding: 20px 3.7%;
     text-decoration: none;
     transition: 0.3s;
 }
@@ -24,4 +34,10 @@
     background: #ddd;
     color: black;
     transition: 0.3s;
+}
+
+@media screen and (min-width: 912px) {
+    .navbar p {
+        font-size: 18px;
+    }
 }

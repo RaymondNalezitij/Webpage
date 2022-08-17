@@ -1,17 +1,32 @@
+* {
+    text-decoration: none;
+}
+
 section {
     background-color: black;
     display: flex;
     flex-direction: column;
     max-width: 912px;
-    margin-top: 45px;
+    margin: 60px 0 10px 0;
 }
 
 .return {
-    background-color: black;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     max-width: 912px;
     justify-content: left;
+}
+
+.return a {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.return h3 {
+    margin: 1px 0 0 5px;
+    color: white;
 }
 
 .page-top {
@@ -47,19 +62,26 @@ section {
 .title h1 {
     color: white;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
+    padding: 10px 0 0 0;
 }
 
 .main {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    max-width: 1000px;
+    max-width: 912px;
 }
 
 .add-article {
     display: flex;
     justify-content: center;
+}
+
+.add-article-button-border {
+    margin: 20px;
+    width: 100%;
+    max-width: 912px;
 }
 
 
@@ -76,7 +98,7 @@ section {
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    width: 889px;
+    width: 100%;
 }
 
 .button-85:before {

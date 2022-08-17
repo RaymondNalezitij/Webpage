@@ -11,14 +11,15 @@
 {% include "./Shared/head.twig" %}
 
 <body>
-<div style="display: flex;flex-direction: row;min-width: 912px; justify-content: left">
-    <a class="return" href="/" style="display: flex;flex-direction: row;text-decoration: none; margin-top: 20px;">
-        <img src="/app/Views/Shared/back_arrow.png" style="max-height: 30px;">
-        <h3 style="margin: 1px 0 0 5px; color: white">Main page</h3>
-    </a>
-</div>
 
 <section>
+    <div class="return">
+        <a class="return" href="/">
+            <img src="/app/Views/Shared/back_arrow.png" style="max-height: 30px;">
+            <h3>Main page</h3>
+        </a>
+    </div>
+
     <div class="main">
 
         <div class="page-top">
@@ -29,7 +30,7 @@
 
         {% for news in responses %}
             <div class="article">
-                <a href="{{ news.url }}" target=”_blank” style="text-decoration: none;">
+                <a href="{{ news.url }}" target=”_blank”>
                     <div class="article-content">
                         <h2>{{ news.title }}</h2>
                         <p>"{{ news.description }}"</p>

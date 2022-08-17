@@ -2,26 +2,21 @@
 
 namespace App\Controllers;
 
-use App\Services\DisplayAllNewsService;
-use App\Services\StoreNewsArticleService;
 use App\Repositories\WeatherApiRepository;
-use App\Repositories\UserNewsRepository;
+use App\Services\DisplayAllNewsService;
 use App\View;
 
 class NewsController
 {
     private DisplayAllNewsService $newsService;
-    private StoreNewsArticleService $newsArticleService;
     private WeatherApiRepository $weatherApiRepository;
 
     public function __construct(
-        DisplayAllNewsService   $newsService,
-        StoreNewsArticleService $newsArticleService,
-        WeatherApiRepository    $weatherApiRepository
+        DisplayAllNewsService $newsService,
+        WeatherApiRepository  $weatherApiRepository
     )
     {
         $this->newsService = $newsService;
-        $this->newsArticleService = $newsArticleService;
         $this->weatherApiRepository = $weatherApiRepository;
     }
 
@@ -38,22 +33,4 @@ class NewsController
         ]);
     }
 
-    public function create(): View
-    {
-        return new View('CreateArticle.twig');
-    }
-
-    public function store(): void
-    {
-        $this->newsArticleService->execute();
-    }
-
-    public function displayUserArticles(): View
-    {
-        $display = new UserNewsRepository();
-
-        return new View('UserArticles.twig', [
-            'responses' => $display->post()
-        ]);
-    }
 }

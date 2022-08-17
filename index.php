@@ -8,10 +8,10 @@ $dotenv->load();
 $dispatcher = FastRoute\simpleDispatcher(function (FastRoute\RouteCollector $r) {
     $r->addRoute('GET', '/', 'App\Controllers\NewsController@index');
 
-    $r->addRoute('GET', '/userArticles', 'App\Controllers\NewsController@displayUserArticles');
+    $r->addRoute('GET', '/userArticles', 'App\Controllers\UserArticlesController@displayUserArticles');
 
-    $r->addRoute('GET', '/addArticle/create', 'App\Controllers\NewsController@create');
-    $r->addRoute('POST', '/addArticle', 'App\Controllers\NewsController@store');
+    $r->addRoute('GET', '/addArticle/create', 'App\Controllers\UserArticlesController@create');
+    $r->addRoute('POST', '/addArticle', 'App\Controllers\UserArticlesController@store');
 });
 
 //Fetch method and URI from somewhere

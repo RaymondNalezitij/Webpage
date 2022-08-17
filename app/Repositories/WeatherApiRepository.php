@@ -11,8 +11,9 @@ use GuzzleHttp\Client;
 class WeatherApiRepository
 {
 
-    public function getWeather()
+    public function getWeather(): array
     {
+
         $client = new Client([
             'base_uri' => $_ENV['WEATHER_API_URL']
         ]);
@@ -43,8 +44,6 @@ class WeatherApiRepository
             $i++;
         }
 
-        $weather = [$weatherToday, $weatherFuture];
-
-        return ($weather);
+        return [$weatherToday, $weatherFuture];
     }
 }

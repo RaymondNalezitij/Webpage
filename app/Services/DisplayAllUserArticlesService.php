@@ -2,15 +2,15 @@
 
 namespace App\Services;
 
-use App\Repositories\UserNewsRepository;
+use App\Repositories\UserNewsRepositoryMYSQL;
 
 class DisplayAllUserArticlesService
 {
-    private UserNewsRepository $newsRepository;
+    private UserNewsRepositoryMYSQL $newsRepository;
 
     public function __construct()
     {
-        $this->newsRepository = new UserNewsRepository();
+        $this->newsRepository = new UserNewsRepositoryMYSQL();
     }
 
     public function execute(): array
