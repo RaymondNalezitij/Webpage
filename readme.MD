@@ -8,4 +8,4 @@ Copy the key to ".env.example" file "NEWS_API_KEY" variable.
 Go to "http://api.weatherapi.com" to register for a key.
 Copy the key to ".env.example" file "WEATHER_API_KEY" variable.
 
-After that you need to rename the ".env.example" to ".env".
+After that you need to rename the ".env.example" file to ".env".
