@@ -1,17 +1,16 @@
 <h1 align="center"> News page </h1>
+<h2 align="center"> Website Preview </h2>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/102956031/188484822-4dfe4b8f-7b82-42ca-a96f-c011d9c0f2b2.gif">
+</p>
+
+---
 <h2 align="center"> Description </h2>
 
 This is a webpage that is displaying news in multiple cattegories, including sports, tehcnology, entertainmeny etc..
 The webpage uses two APIs to collect the news and the weather data that (for the icons that are at the top of the page).
 
 This website also lets the user to store or view their own articles.
-
----
-
-<h2 align="center"> Website Preview </h2>
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/102956031/188484822-4dfe4b8f-7b82-42ca-a96f-c011d9c0f2b2.gif">
-</p>
 
 ---
 
